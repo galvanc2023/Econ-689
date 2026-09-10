@@ -49,3 +49,8 @@ describe lwage educ exper expersq black south smsa nearc4
 summarize lwage educ exper expersq black south smsa nearc4
 regress lwage educ
 regress lwage educ exper expersq black south smsa
+predict lwage_fitted
+predict lwage_residual, residuals
+summarize lwage_residual
+regress educ nearc4
+log close
